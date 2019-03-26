@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1b1b1b;
+  --border-bottom-color: #e2e2e2;
+  --footer-background-color: #3b3b3b;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+}
+
+/* Utilities  */
+
+.flexbox-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.4rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.flexbox-container--navlink__color span {
+  color: #1b1b1b;
+  font-size: 1.5rem;
+}
+
+/* Header  */
+
+header {
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+header,
+footer {
+  background: #fff;
+  align-items: center;
+  padding: .7rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+header .logo,
+footer .logo {
+  flex-grow: 1;
+}
+
+header .logo_highlights {
+    font-size: 1rem;
+    color: black;
+}
+
+header .logo span img,
+footer .logo span img {
+  display: inline-block;
+  width: 3.6rem;
+  height: auto;
+}
+
+footer {
+  background: var(--footer-background-color);
+  margin-top: 1.7rem;
+}
+
+/* Slider  */
+
+.slide-container {
+  padding-top: 0;
+}
+
+.item-slider {
+  height: 700px;
+  background-size: cover !important;
+  background-position: top center !important;
+  position: relative;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.item-slider .caption {
+  color: #fff;;
+  position: absolute;
+  right: 0;
+  padding: 2rem;
+  text-align: right;
+  width: 20rem;
+  text-transform: uppercase;
+}
+
+.item-slider .caption h4 {
+  font-weight: 300;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.item-slider .caption p {
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+/* Subscribe  */
+
+.subscribe_panel {
+  text-align: center;
+  width: 21.88rem;
+  margin: 0 auto;
+}
+
+.subscribe_panel h3 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  padding-top: 4rem;
+}
+
+.subscribe_panel input {
+  border-radius: 1.25rem;
+  border: 3px solid #dddddd;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  margin: 0.6rem 0;
+}
+
+.subscribe_panel input:focus {
+  outline-width: 0;
+  border: 3px solid rgba(100, 238, 208, 0.815);
+}
+
+.subscribe_panel small {
+  line-height: 0;
+}
+
+/* Home Image Grid  */
+
+.home_images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.home_images .item {
+  flex-grow: 1;
+  position: relative;
+  height: 16.88rem;
+  overflow: hidden;
+}
+
+.home_images .item.lg {
+  width: 50%;
+  animation-delay: 200ms;
+  -moz-animation-delay: 200ms;
+  -webkit-animation-delay: 200ms;
+}
+
+.home_images .item.md {
+  width: 30%;
+  animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -webkit-animation-delay: 500ms;
+}
+
+.home_images .item.sm {
+  width: 20%;
+  animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+}
+
+.home_images .item .image {
+  height: 16.88rem;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.home_images .item .title {
+  background: rgb(53, 53, 53);
+  padding: 0.75rem;
+  transition: all 500ms ease-in-out;
+  padding-bottom: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.home_images .item:hover .title {
+  transform: translate(0, -69px);
+}
+
+.home_images .item .title a {
+  color: #fff;
+}
+
+.home_images .item .veil {
+  background: #000000;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  transition: all 500ms ease-in-out;
+}
+
+.home_images .item:hover .veil {
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+}
+
+/* Poll  */
+
+.home_poll {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home_poll h3 {
+  margin-top: 1.5rem;
+}
+
+.home_poll .poll_container {
+  display: flex;
+}
+
+.poll_container .poll_item {
+  padding: 1.3rem;
+  flex-grow: 1;
+}
+
+.poll_item img {
+  width: 6.25rem;
+  cursor: pointer;
+}
+
+.poll_item:nth-child(3) img {
+    width: 7.25rem;
+}
+
+.poll_container .poll_item div {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.2rem;
+}
+
+
+/* Teams  */
+
+.team_item {
+    width: 25%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.teams_container {
+    margin-top: 1.2rem;
+}
+
+.teams_container .team_item img {
+    width: 12rem;
+}
+
+.teams_component {
+    min-height: 50rem;
+}
+
+.teams_input {
+    text-align: center;
+    padding: 1.4rem 0;
+    background: #e6e6e6;
+}
+
+.teams_input input {
+  font-family: "Roboto", sans-serif;
+    border-radius: 2rem;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 1.6rem;
+    padding: .75rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.teams_container  {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+/* Team Roster  */
+
+.team_data_wrapper .squad .item img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.team_data_wrapper {
+    display: flex;
+}
+
+.team_data_wrapper .left {
+    box-sizing: border-box;
+    padding: .7rem 1.4rem;
+}
+
+.team_data_wrapper .left img {
+    width: 9.5rem;
+}
+
+.team_data_wrapper .right {
+    flex-grow: 1;
+    box-sizing: border-box;
+    border-left: 1px solid #b9b9b9;
+    padding: 0 1.4rem;
+}
+
+.team_data_wrapper .right h1 {
+    color: #3d3b3b;
+}
+
+.team_data_wrapper .squad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.team_data_wrapper .squad .item {
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    padding: 1.4rem;
+    box-sizing: border-box;
+}
+
+.team_data_wrapper .squad .item h4 {
+    text-align: center;
+    color: #006bb6;
+}
+
+.team_data_wrapper .squad .item .details {
+    font-size: .8rem;
+    padding: .25rem 0;
+}
+
+.team_data_wrapper .squad .item .details span {
+    font-weight: 600;
+}
