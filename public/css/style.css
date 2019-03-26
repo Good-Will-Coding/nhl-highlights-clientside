@@ -150,6 +150,10 @@ footer {
   line-height: 0;
 }
 
+.email_error {
+  color: rgb(209, 28, 28);
+}
+
 /* Home Image Grid  */
 
 .home_images {
