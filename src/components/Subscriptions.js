@@ -25,7 +25,7 @@ const Subscriptions = () => {
 
   const saveSubscription = email => {
     axios
-      .post("https://frozen-journey-27456.herokuapp.com/subscriptions", {
+      .post("https://frozen-journey-27456.herokuapp.com/subcriptions", {
         email
       })
       .then(() => {
